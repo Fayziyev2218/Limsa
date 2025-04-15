@@ -1,0 +1,28 @@
+@font-face {
+    font-family: Montserrat;
+    src: url("../src/assets/fonts/Montserrat-Regular.ttf");
+}
+
+@import "tailwindcss";
+
+@theme{
+    --font-montserrat: Montserrat,'sans-serif'
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex-grow: 1;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1480px;
+    padding: 0px 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
