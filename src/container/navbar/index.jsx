@@ -3,10 +3,11 @@ import HamburgerButton from '../../companents/hamburgerButton';
 import logo from '/logo.png'
 import { NavLink } from 'react-router-dom';
 import LanguageSwitcher from '../../companents/LanguageSwitcher ';
-// from-[#24183d]
+import { useTranslation } from "react-i18next";
 
 export default function Navbar(){
     const [burger,setBurger] = useState(false)
+    const { t } = useTranslation();
     const handBurger = ()=>{
         setBurger(!burger)
     }
@@ -18,7 +19,7 @@ export default function Navbar(){
                     <NavLink to={"/"}><img className='w-[120px] h-[30px] max-md:w-[150px] max-md:h-[37px]' src={logo} alt="logo" /></NavLink>
 
                     <ul className='flex items-center gap-[30px] max-lg:hidden'>
-                        <li><NavLink to={"/"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>home</NavLink></li>
+                        <li><NavLink to={"/"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>{t("welcome")}</NavLink></li>
                         <li><NavLink to={"/ourworks"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>Our works</NavLink></li>
                         <li><NavLink to={"/services"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>Our Services</NavLink></li>
                         <li><NavLink to={"/prices"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>Prices</NavLink></li>

@@ -1,10 +1,15 @@
 import React, { useState } from "react";
-
+import { useTranslation } from "react-i18next";
 const LanguageSwitcher = () => {
   const [language, setLanguage] = useState("en");
+  const { i18n } = useTranslation();
+  const changeLanguage = (e) => {
+    
+  };
 
   const handleChange = (e) => {
     setLanguage(e.target.value);
+    i18n.changeLanguage(e.target.value);
     console.log("Tanlangan til:", e.target.value);
   };
 
