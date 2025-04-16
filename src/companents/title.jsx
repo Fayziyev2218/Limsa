@@ -17,7 +17,7 @@ export default function Title({ text, textLeft = "center", size = "medium" }) {
     }
   
     return (
-      <h3 className={`${FontSizeClass} ${textPosition} mx-auto font-montserrat font-bold text-white max-md:text-[30px] max-sm:text-[21px]`}>
+      <h3 className={`${FontSizeClass} ${textPosition} mx-auto font-montserrat font-bold text-white max-md:text-[30px] max-sm:text-[21px] max-lg:text-center`}>
         {text}
       </h3>
     );

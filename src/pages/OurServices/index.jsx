@@ -1,4 +1,5 @@
 import Benefits from "../../companents/benefits";
+import ContactMap from "../../companents/contactMap";
 import Contact from "../../companents/contaxct";
 import TopButton from "../../companents/topButton";
 
@@ -9,6 +10,7 @@ export default function OurServices(){
             <TopButton text={"Our Services"}/>
             <Benefits/>
             <Contact/>
+            <ContactMap/>
         </div>
     )
 }

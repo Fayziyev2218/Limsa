@@ -70,7 +70,7 @@ export default function Home() {
         <Ourwork/>
         <Benefits/>
         <Contact/>
-        {/* <ContactMap/> */}
+        <ContactMap/>
       </div>
     </>
   );
