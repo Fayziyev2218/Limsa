@@ -10,23 +10,26 @@ i18n
     resources: {
       uz: {
         translation: {
-          welcome: "Xush kelibsiz",
-          order: "Buyurtma berish",
-          negotiate: "Kelishish",
+          home: "Бош саҳифа",
+          services: "Хизматларимиз",
+          works: "Бизнинг ишлар",
+          prices:"Нархлар",
         },
       },
       en: {
         translation: {
-          welcome: "Welcome",
-          order: "Place Order",
-          negotiate: "Negotiate",
+          home: "Home",
+          services: "Our Services",
+          works: "Our works",
+          prices:"Prices",
         },
       },
       ru: {
         translation: {
-          welcome: "Добро пожаловать",
-          order: "Сделать заказ",
-          negotiate: "Договориться",
+          home: "Главная",
+          services: "Наши услуги",
+          works: "Наша работа",
+          prices:"Цены",
         },
       },
     },
