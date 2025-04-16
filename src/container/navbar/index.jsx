@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import HamburgerButton from '../../companents/hamburgerButton';
+import HamburgerButton from '../../components/hamburgerButton';
 import logo from '/logo.png'
 import { NavLink } from 'react-router-dom';
-import LanguageSwitcher from '../../companents/LanguageSwitcher ';
+import LanguageSwitcher from '../../components/LanguageSwitcher ';
 import { useTranslation } from "react-i18next";
 
 export default function Navbar(){

@@ -1,8 +1,8 @@
-import ServiceCard from "../../companents/affordable";
-import ContactMap from "../../companents/contactMap";
-import Contact from "../../companents/contaxct";
-import Title from "../../companents/title";
-import TopButton from "../../companents/topButton";
+import ServiceCard from "../../components/affordable";
+import ContactMap from "../../components/contactMap";
+import Contact from "../../components/contaxct";
+import Title from "../../components/title";
+import TopButton from "../../components/topButton";
 
 export default function Prices() {
   const cards = [

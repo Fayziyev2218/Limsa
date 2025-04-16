@@ -1,7 +1,7 @@
-import ContactMap from "../../companents/contactMap";
-import Contact from "../../companents/contaxct";
-import Ourwork from "../../companents/ourWork";
-import TopButton from "../../companents/topButton";
+import ContactMap from "../../components/contactMap";
+import Contact from "../../components/contaxct";
+import Ourwork from "../../components/ourWork";
+import TopButton from "../../components/topButton";
 
 
 export default function OurWorks(){

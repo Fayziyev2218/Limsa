@@ -1,7 +1,7 @@
-import Benefits from "../../companents/benefits";
-import ContactMap from "../../companents/contactMap";
-import Contact from "../../companents/contaxct";
-import TopButton from "../../companents/topButton";
+import Benefits from "../../components/benefits";
+import ContactMap from "../../components/contactMap";
+import Contact from "../../components/contaxct";
+import TopButton from "../../components/topButton";
 
 
 export default function OurServices(){

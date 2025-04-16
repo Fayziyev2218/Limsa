@@ -3,7 +3,7 @@ import Navbar from './container/navbar';
 import { route } from './routers';
 import Footer from './container/footer';
 import { ToastContainer } from 'react-toastify';
-import ScrollToTop from './companents/ScrollToTop'; // 👈 ScrollToTop import qilingan
+import ScrollToTop from './components/scrollToTop'; // 👈 ScrollToTop import qilingan
 
 function App() {
   return (
