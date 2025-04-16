@@ -2,6 +2,7 @@ import { useState } from 'react';
 import HamburgerButton from '../../companents/hamburgerButton';
 import logo from '/logo.png'
 import { NavLink } from 'react-router-dom';
+import LanguageSwitcher from '../../companents/LanguageSwitcher ';
 // from-[#24183d]
 
 export default function Navbar(){
@@ -20,8 +21,9 @@ export default function Navbar(){
                         <li><NavLink to={"/"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>home</NavLink></li>
                         <li><NavLink to={"/ourworks"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>Our works</NavLink></li>
                         <li><NavLink to={"/services"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>Our Services</NavLink></li>
-                        {/* <li><NavLink to={"/prices"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>Prices</NavLink></li> */}
+                        <li><NavLink to={"/prices"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>Prices</NavLink></li>
                     </ul>
+                    <div className='max-lg:hidden'><LanguageSwitcher/></div>
                 </div>
 
                 <a  className='max-lg:hidden text-[14px] font-montserrat font-medium text-white bg-[#6c2dba] rounded-[15px] border border-[#6c2dba] py-[13px] px-[25px] hover:bg-[rgb(12,10,10)]' href="tel:+998 (94) 605 22 18">tel:+998 (94) 605 22 18</a>
@@ -35,8 +37,9 @@ export default function Navbar(){
                         <li><NavLink onClick={handBurger} to={"/"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>home</NavLink></li>
                         <li><NavLink onClick={handBurger} to={"/ourworks"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>Our works</NavLink></li>
                         <li><NavLink onClick={handBurger} to={"/services"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>Our Services</NavLink></li>
-                        {/* <li><NavLink onClick={handBurger} to={"/prices"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>Prices</NavLink></li> */}
+                        <li><NavLink onClick={handBurger} to={"/prices"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>Prices</NavLink></li>
                     </ul>
+                    <div className='max-lg:block max-lg:mt-4'><LanguageSwitcher/></div>
             </div>
 
             <div
