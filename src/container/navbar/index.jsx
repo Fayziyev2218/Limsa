@@ -2,8 +2,8 @@ import { useState } from 'react';
 import HamburgerButton from '../../components/hamburgerButton';
 import logo from '/logo.png'
 import { NavLink } from 'react-router-dom';
-import LanguageSwitcher from '../../components/LanguageSwitcher ';
 import { useTranslation } from "react-i18next";
+import LanguageSwitcher from '../../components/LanguageSwitcher';
 
 export default function Navbar(){
     const [burger,setBurger] = useState(false)
@@ -24,7 +24,8 @@ export default function Navbar(){
                         <li><NavLink to={"/services"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>{t("works")}</NavLink></li>
                         <li><NavLink to={"/prices"} className={({isActive})=>isActive ? "font-montserrat font-light text-white text-[16px] rounded-[6px] border-b-2 border-[rgb(108,45,186)] py-[5px] px-[8px]" : "font-montserrat font-light text-white text-[16px] py-[5px] px-[8px]"}>{t("prices")}</NavLink></li>
                     </ul>
-                    <div className='max-lg:hidden'><LanguageSwitcher/></div>
+                    <div className='max-lg:hidden'><LanguageSwitcher />
+                    </div>
                 </div>
 
                 <a  className='max-lg:hidden text-[14px] font-montserrat font-medium text-white bg-[#6c2dba] rounded-[15px] border border-[#6c2dba] py-[13px] px-[25px] hover:bg-[rgb(12,10,10)]' href="tel:+998 (94) 605 22 18">+998 (94) 605 22 18</a>

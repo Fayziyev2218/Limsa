@@ -1,9 +1,9 @@
 import { icon } from "../assets/icons";
 import Title from "./title";
 import { useTranslation } from "react-i18next";
-import { useMemo } from "react";
+
 export default function Benefits() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const icons = icon;
   // const benefitData = [
   //   {
@@ -43,6 +43,7 @@ export default function Benefits() {
   //     icon: icons.planet,
   //   },
   // ];
+//  console.log(i18n?.language,"t")
   const benefitData = [
     {
       id: "01",
