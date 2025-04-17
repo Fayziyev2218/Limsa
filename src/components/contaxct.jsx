@@ -4,10 +4,14 @@ import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 
 export default function Contact() {
   const [phone, setPhone] = useState("");
   const [error, setError] = useState("");
+    const { t } = useTranslation();
+  
 
   const sendMessage =(event)=>{
     event.preventDefault()
@@ -60,39 +64,39 @@ export default function Contact() {
     <div id="contact" className="pt-[150px] max-[900px]:pt-[50px] pb-[50px] bg-[#161616]">
       <div className="container flex justify-between gap-[50px] max-[900px]:flex-col">
         <div className="w-[50%] max-[900px]:w-full">
-          <p className={`text-[35px]  mx-auto font-montserrat font-bold text-white max-md:text-[30px] max-sm:text-[21px] max-[900px]:text-center`}>Order a website for your business now, And get a small gift from us 10% off!</p>
+          <p className={`text-[35px]  mx-auto font-montserrat font-bold text-white max-md:text-[30px] max-sm:text-[21px] max-[900px]:text-center`}>{t("order")}</p>
           <p className="font-montserrat text-[#6c2dba] font-medium text-[16px] my-[16px] max-[900px]:text-center">
-            Satisfying every customer is our highest goal - LIMSA
+          {t("Satisfying")}
           </p>
           <p className="font-montserrat text-white font-semibold text-[18px] mb-[16px] max-[900px]:text-center">
-            Pages
+          {t("Pages")}
           </p>
           <div className="max-[900px]:text-center">
           <NavLink
           to={"/"}
             className="font-montserrat text-[#6c6c6c] font-medium text-[16px] max-[900px]:text-center"
           >
-            Home
+            {t("home")}
           </NavLink>
           <br />
           <NavLink
           to={"/services"}
             className="font-montserrat text-[#6c6c6c] font-medium text-[16px] max-[900px]:text-center"
           >
-            Our Services
+            {t("services")}
           </NavLink>
           </div>
         </div>
 
         <div className="w-[50%] max-[900px]:w-full">
           <p className="font-montserrat text-white font-semibold text-[32px] mb-[32px] max-sm:text-[16px] max-[900px]:text-center">
-            Leave your details
+          {t("details")}
           </p>
           <form onSubmit={sendMessage} id="myForm">
             <input
             id="name"
               className="bg-[rgb(54,54,54)] w-full text-white p-[20px] rounded-3xl outline-none mb-[20px]"
-              placeholder="your name"
+              placeholder={t("inputName")}
               type="text"
               required
             />
@@ -120,7 +124,7 @@ export default function Contact() {
             id="mail"
               rows="4"
               required
-              placeholder="Your message..."
+              placeholder={t("inputMessage")}
               className="w-full bg-[#2d2d2d] text-white placeholder-gray-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-700 resize-none rounded-3xl outline-none mt-[20px] mb-[30px]"
             />
 
@@ -129,7 +133,7 @@ export default function Contact() {
     type="submit"
     className="w-[151px] bg-[rgba(108,45,186,0.73)] hover:bg-[rgba(136,85,198,0.73)] text-white py-[15px] rounded-[25px] text-[14px] font-medium"
   >
-    Send
+    {t("send")}
   </button>
 </div>
                 

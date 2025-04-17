@@ -7,72 +7,73 @@ import workPhotos6 from "/workPhotos6.jpg";
 import workPhotos7 from "/workPhotos7.jpg";
 import workPhotos8 from "/8.jpg";
 import workPhotos3 from "/workPhotos3.png";
-import Contact from "./contaxct";
+import { useTranslation } from "react-i18next";
 
 export default function Ourwork() {
+    const { t } = useTranslation();
   const ourWorkData = [
     {
       id: "01",
       link: "https://www.autozoomrental.com/",
       title: "ataevbahodirbuild.uz",
       img: workPhotos,
-      text: "Ataev Bahadir Build - quality construction and repair services! Choose us, create the house of your dreams.",
+      text: t("workCardTitle"),
     },
     {
       id: "02",
       link: "https://www.autozoomrental.com/",
       title: "autozoomrental.com",
       img: workPhotos2,
-      text: "AutoZoomRental - convenient and reliable car rental! Make your trip more pleasant with our cars.",
+      text: t("workCardTitle2"),
     },
     {
       id: "03",
       link: "https://www.it-time-academy.uz/",
       title: "it-time-academy.uz",
       img: workPhotos3,
-      text: "IT Time Academy is the destination of modern IT knowledge! Take the professions of the future with us.",
+      text: t("workCardTitle3"),
     },
     {
       id: "04",
       link: "https://www.it-time-academy.uz/",
       title: "homekit.uz",
       img: workPhotos4,
-      text: "HomeKit – modern and convenient smart home solutions! Ensure the safety and comfort of your home with us.",
+      text:t("workCardTitle4"),
     },
     {
       id: "05",
       link: "https://www.uzloyal.uz/",
       title: "uzloyal.uz",
       img: workPhotos5,
-      text: "UzLoyal is a reliable and convenient loyalty system! The most effective way to motivate your customers.",
+      text: t("workCardTitle5"),
     },
     {
       id: "06",
       link: "https://www.uzloyal.uz/",
       title: "namanganoits.uz",
       img: workPhotos6,
-      text: "Namangan ITS is a center of modern IT knowledge and skills! Get new opportunities at every step.",
+      text:t("workCardTitle6"),
     },
     {
       id: "07",
       link: "https://propartnyor.uz/",
       title: "propartnyor.uz",
       img: workPhotos7,
-      text: "ProPartnyor is the address of reliable and effective cooperation! We will work together for the success of your business.",
+      text:t("workCardTitle7"),
     },
     {
       id: "08",
       link: "https://zamontour.uz/",
       title: "zamontour.uz",
       img: workPhotos8,
-      text: "ZamonTour – experience a happy tourist experience with us! Your trip with us is guaranteed to be more pleasant.",
+      text:t("workCardTitle8")
     },
   ];
 
   return (
     <div className="bg-[#161616] pt-[100px] pb-[50px] max-sm:pt-[50px]">
       <div className="container">
-        <Title size="medium" text={"Our Recent Projects"} />
+        <Title size="medium" text={t("Recent")} />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[40px] mt-[40px]">
           {ourWorkData.map((item) => {
             return (

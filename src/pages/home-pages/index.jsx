@@ -8,8 +8,10 @@ import show from "/show.png";
 import showbottom from '/showbottom.png'
 import showbottom2 from '/showbottom2.png'
 import Marquee from "react-fast-marquee";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <>
       <div id="home" className="bg-[rgb(12,10,10)]">
@@ -18,17 +20,16 @@ export default function Home() {
           <div className="container flex items-center justify-between gap-[50px] max-md:flex-col">
             <div className="w-[40%] max-lg:w-[58%] max-md:w-full">
               <h1 className="font-montserrat font-bold text-[28px] max-md:text-[18px] text-white mb-[32px] ">
-                Perfect 'IT' solutions to grow your business!
+              {t("title")}
               </h1>
               <h1 className="font-montserrat font-light text-[16px] max-md:text-[14px] text-white mb-[24px] ">
-                Entrust your project to experts with more than 10 years of
-                experience and achieve high success in a short time.
+              {t("title2")}
               </h1>
               <a
                 className="text-[14px] font-montserrat font-bold text-white bg-[#6c2dba] rounded-[15px] border-2 border-[#6c2dba] py-[13px] px-[25px] hover:bg-[rgb(12,10,10)] duration-200 ease-in"
                 href="#contact"
               >
-                Contact
+                {t("sendContact")}
               </a>
             </div>
 
@@ -48,11 +49,11 @@ export default function Home() {
             </div>
             
             <div className="w-[40%] max-lg:w-full">
-              <Title text={"Frequently Asked Questions"} size="medium" />
+              <Title text={t("frequently")} size="medium" />
               <div className="mt-[35px] flex flex-col gap-[10px]">
-                <According/>
-                <According/>
-                <According/>
+                <According text={t("according")} text2={t("according2")}/>
+                <According text={t("according3")} text2={t("according4")}/>
+                <According text={t("according5")} text2={t("according6")}/>
               </div>
             </div>
           </div>

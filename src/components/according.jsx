@@ -4,9 +4,11 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import { useTranslation } from "react-i18next";
 
-export default function According() {
+export default function According({text,text2}) {
   const [expanded, setExpanded] = useState(false);
+    const { t } = useTranslation();
 
   const handleChange = () => {
     setExpanded(!expanded);
@@ -39,7 +41,7 @@ export default function According() {
         >
           <p className={`text-[20px] font-bold transition-colors duration-300 ${
             expanded ? 'text-[#6c2dba]' : 'text-white'
-          }`}>Why are the prices so cheap?</p>
+          }`}>{text}</p>
         </Typography>
       </AccordionSummary>
       <AccordionDetails
@@ -50,9 +52,7 @@ export default function According() {
         }}
       >
         <Typography className="text-[#ccc] text-[16px]">
-          Our prices are really cheap compared to the quality. The reason is
-          that we don't have excess labor in our web studio, so we don't have
-          excess costs. That's why we keep our prices low compared to others.
+          {text2}
         </Typography>
       </AccordionDetails>
     </Accordion>
