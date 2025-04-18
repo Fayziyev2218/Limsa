@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+
 const LanguageSwitcher = () => {
-  const [language, setLanguage] = useState("en");
   const { i18n } = useTranslation();
-  
+  const [language, setLanguage] = useState(i18n.language); // <--- o‘zgarish shu yerda
+
+  useEffect(() => {
+    setLanguage(i18n.language); // refresh bo‘lganda ham tanlangan tilni aks ettiradi
+  }, [i18n.language]);
 
   const handleChange = (e) => {
-    setLanguage(e.target.value);
-    i18n.changeLanguage(e.target.value);
-    console.log("Tanlangan til:", e.target.value);
+    const selectedLang = e.target.value;
+    setLanguage(selectedLang);
+    i18n.changeLanguage(selectedLang);
+    console.log("Tanlangan til:", selectedLang);
   };
 
   return (

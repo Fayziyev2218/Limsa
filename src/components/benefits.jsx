@@ -2,8 +2,9 @@ import { icon } from "../assets/icons";
 import Title from "./title";
 import { useTranslation } from "react-i18next";
 
+
 export default function Benefits() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const icons = icon;
   // const benefitData = [
   //   {
@@ -47,41 +48,42 @@ export default function Benefits() {
   const benefitData = [
     {
       id: "01",
-      title: t("benefits.adaptive.title"),
-      text: t("benefits.adaptive.text"),
+      title: t("benefitss.adaptive.title"),
+      text: t("benefitss.adaptive.text"),
       icon: icons.nout,
     },
     {
       id: "02",
-      title: t("benefits.admin.title"),
-      text: t("benefits.admin.text"),
+      title: t("benefitss.admin.title"),
+      text: t("benefitss.admin.text"),
       icon: icons.admin,
     },
     {
       id: "03",
-      title: t("benefits.protection.title"),
-      text: t("benefits.protection.text"),
+      title: t("benefitss.protection.title"),
+      text: t("benefitss.protection.text"),
       icon: icons.shield,
     },
     {
       id: "04",
-      title: t("benefits.monitoring.title"),
-      text: t("benefits.monitoring.text"),
+      title: t("benefitss.monitoring.title"),
+      text: t("benefitss.monitoring.text"),
       icon: icons.headset,
     },
     {
       id: "05",
-      title: t("benefits.domain.title"),
-      text: t("benefits.domain.text"),
+      title: t("benefitss.domain.title"),
+      text: t("benefitss.domain.text"),
       icon: icons.server,
     },
     {
       id: "06",
-      title: t("benefits.unique.title"),
-      text: t("benefits.unique.text"),
+      title: t("benefitss.unique.title"),
+      text: t("benefitss.unique.text"),
       icon: icons.planet,
     },
   ];
+  
   return (
     <div id="ourServices" className="bg-[#161616] py-[30px]">
       <div className="container">
